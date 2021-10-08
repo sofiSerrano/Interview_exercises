@@ -10,15 +10,15 @@ def comparar_palabras(pal,pal2):
     pos=i-1
     return pos
 
-def encontrarmayor(lst,stri):
-    may=lst[0]
+def encontrarmen(lst,stri):
+    men=lst[0]
     for i in range(0,len(lst)):
-        comp=comparar_palabras(lst[i],may)
-        if stri.index(lst[i][comp])<stri.index(may[comp]):
-            may=lst[i]
-        if stri.index(lst[i][comp])<=stri.index(may[comp]) and len(lst[i])<len(may):
-            may=lst[i]
-    return may
+        comp=comparar_palabras(lst[i],men)
+        if stri.index(lst[i][comp])<stri.index(men[comp]):
+            men=lst[i]
+        if stri.index(lst[i][comp])<=stri.index(men[comp]) and len(lst[i])<len(men):
+            men=lst[i]
+    return men
 
 def ordenar_extraterrestre(desordenadas,orden_alfabeto):
     ordenada=[]
@@ -32,7 +32,3 @@ def main():
     lista=ordenar_extraterrestre(['miel', 'extraterrestre', 'al', 'automovil', 'auto', 'revestir'],'zyxwvutsrqponmlkjihgfedcba')
     print(lista)
 main()
-        
-        
-
-
